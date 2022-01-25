@@ -1,0 +1,154 @@
+= Uebung 01 - Matstamm
+:sectnums: true
+:sectnumlevels: 3
+:imagesdir: ./images
+
+== Material anlegen
+=== Transaktion MM01
+
+Folgende Felder manuell ausfüllen:
+
+1. Felder ausfüllen:
+
+* *Material:* L14AxxBLECH_TEST
+* *Branche:* Maschinenbau
+* *Materialart:* Rohstoff
+
+image::mm01-01.png[]
+
+1. ENTER drücken
+2. "Grunddaten" auswählen
+3. ENTER drücken
+
+image::mm01-02.png[]
+
+==== Grunddaten ausfüllen
+
+Folgende Felder ausfüllen:
+
+* *Materialkurztext (DE):* Feinblech schwarz 2,5 mm
+* *Basismengeneinheit:* KG
+* *Warengruppe:* Blech
+* *Bruttogewicht:* 40
+* *Gewichtseinheit:* KG
+* *Größe/Abmessung:* 2000x1000x2,5
+
+image::mm01-03.png[]
+
+1. ENTER drücken
+2. "Ja" drücken
+
+==== Werkdaten ausfüllen
+1. Felder ausfüllen:
+
+* *Material:* L14AxxBLECH_TEST
+
+2. ENTER drücken
+3. "Einkauf" auswählen
++
+image::mm01-04.png[]
++
+4. ENTER drücken
+5. Hamburg auswählen (1000)
++
+image::mm01-05.png[]
++
+6. ENTER drücken
+7. Folgende Felder ausfüllen
+* *Basismengeneinheit:* KG
+* *Einkäufergruppe:* 000
+* *Bestellmengeneinheit:* Stück (ST)
++
+image::mm01-06.png[]
++
+8. ENTER drücken
++
+9. Folgendes ausfüllen:
+* *ST:* 1
+* *KG:* 40
++
+image::mm01-07.png[]
++
+10. auf grünen Haken drücken
+11. ENTER drücken und mit "Ja" bestätigen
+
+==== Dispositionsdaten ausfüllen
+1. Wieder in MM01 nach *L14AxxBLECH_TEST* suchen
+2. Disposition 1 auswählen
++
+image::mm01-08.png[]
+3. Wieder Werk Hamburg (1000) auswählen
+4. Folgende Felder ausfüllen:
+* *Dispositionsgruppe:* 0000
+* *Dispomerkmal:* Plangesteuerte Disposition (PD)
+* *Dispolosgröße:* exakte Losgrößenberechnung (EX)
+* *WE-Bearbeitungszeit:* 1
+* *Planlieferzeit:* 3
++
+image::mm01-09.png[]
+5. ENTER drücken und mit grünen Haken bestätigen
+
+==== Lager-/Werkdaten ausfüllen
+1. Wieder nach *L14AxxBLECH_TEST* suchen
+2. Allg. Werksdaten/Lagerung auswählen
+3. ENTER drücken
+4. Werk und Lagerort eingeben (siehe Angabe)
+5. Folgende Felder ausfüllen:
+* *Lagerplatz:* Sekt. 24
++
+image::mm01-10.png[]
+6. ENTER drücken
+7. Das selbe mit Lagerort 0002
+
+==== Buchhaltungsdaten
+1. Nach *L14AxxBLECH_TEST* suchen
+2. Buchhaltung auswählen
+3. Folgende Felder ausfüllen:
+* *Bewertungsklasse:* 3000
+* *Preissteuerung:* V
+* *Gleitender Preis:* 2,35
++
+image::mm01-11.png[]
+
+IMPORTANT: Das selbe wieder bei Werk Berlin
+
+== Grundliste ansehen
+=== Transaktion MMBE
+1. Folgende Felder ausfüllen:
+* *Material*: L14AxxBLECH_TESTL_21
++
+IMPORTANT: Den Haken bei "Keine Nullbestandszeilen" entfernen
+2. Auf die Uhr drücken (Ausführen)
+
+== Merkmale anlegen
+=== Transaktion CT04
+1. Folgende Felder ausfüllen:
+* *Merkmal:* L14A12BLECH_TEST
+2. ENTER drücken
+3. Folgende Felder ausfüllen:
+* *Basisdaten/Bezeichnung:* Länge
+* *Basisdaten/Datentyp:* Numerisches Format
+* *Basisdaten/Anzahl Stellen:* 4
+* *Basisdaten/Eingabe erforderlich:* anhaken
++
+image::mm01-12.png[]
++
+* *Werte/Werte ausfüllen:* 2000, 2500, 3000
++
+4. Speichern.
++
+
+IMPORTANT: Das Ganze für Breite und Dicke nochmal machen. (siehe Angabe)
+
+== Klasse anlegen
+=== Transaktion CL02
+1. Folgende Felder ausfüllen:
+* *Klasse:* L14A12BLECH_TEST
+* *Klassenart:* Materialklasse (001)
+2. Anlegen drücken
+3. Folgende Felder ausfüllen:
+* *Bezeichnung:* BlechklasseTEST
+4. Die vorher angelegten Merkmale unter "Merkmale" hinzufügen
+5. Speichern.
+
+image::cl02-01.png[]
